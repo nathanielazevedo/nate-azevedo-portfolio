@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cs-convert-int-to-string-1",
+    "title": "Integer to String",
+    "difficulty": "easy",
+    "description": "Convert an integer to a string.",
+    "setupCode": "int number = 42;",
+    "starterCode": "// Write your code here\nstring result = ",
+    "expectedOutput": "42",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        int number = 42;\n        {user_code}\n        Console.WriteLine(result);\n    }\n}",
+    "hints": [
+      "Use .ToString() method",
+      "Or use Convert.ToString()"
+    ]
+  },
+  {
+    "id": "cs-convert-string-to-int-1",
+    "title": "String to Integer",
+    "difficulty": "easy",
+    "description": "Convert a string to an integer.",
+    "setupCode": "string text = \"123\";",
+    "starterCode": "// Write your code here\nint number = ",
+    "expectedOutput": "123",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        string text = \"123\";\n        {user_code}\n        Console.WriteLine(number);\n    }\n}",
+    "hints": [
+      "Use int.Parse() method",
+      "Or use Convert.ToInt32()"
+    ]
+  },
+  {
+    "id": "cs-convert-double-to-int-1",
+    "title": "Double to Integer",
+    "difficulty": "easy",
+    "description": "Convert a double to an integer (truncate decimals).",
+    "setupCode": "double value = 3.14;",
+    "starterCode": "// Write your code here\nint result = ",
+    "expectedOutput": "3",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        double value = 3.14;\n        {user_code}\n        Console.WriteLine(result);\n    }\n}",
+    "hints": [
+      "Use explicit casting: (int)value",
+      "Or use Convert.ToInt32() for rounding"
+    ]
+  },
+  {
+    "id": "cs-convert-string-to-double-1",
+    "title": "String to Double",
+    "difficulty": "easy",
+    "description": "Convert a string to a double.",
+    "setupCode": "string text = \"3.14\";",
+    "starterCode": "// Write your code here\ndouble number = ",
+    "expectedOutput": "3.14",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        string text = \"3.14\";\n        {user_code}\n        Console.WriteLine(number);\n    }\n}",
+    "hints": [
+      "Use double.Parse() method",
+      "Or use Convert.ToDouble()"
+    ]
+  },
+  {
+    "id": "cs-convert-bool-to-string-1",
+    "title": "Boolean to String",
+    "difficulty": "easy",
+    "description": "Convert a boolean to a string.",
+    "setupCode": "bool isTrue = true;",
+    "starterCode": "// Write your code here\nstring result = ",
+    "expectedOutput": "True",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        bool isTrue = true;\n        {user_code}\n        Console.WriteLine(result);\n    }\n}",
+    "hints": [
+      "Use .ToString() method",
+      "Boolean values are capitalized in C#"
+    ]
+  }
+]

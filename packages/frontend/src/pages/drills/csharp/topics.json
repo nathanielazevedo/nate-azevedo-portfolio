@@ -1,0 +1,98 @@
+[
+  {
+    "id": "strings",
+    "title": "Strings",
+    "description": "Work with string methods and manipulation",
+    "icon": "📜",
+    "color": "#2196F3",
+    "order": 1
+  },
+  {
+    "id": "conversions",
+    "title": "Type Conversions",
+    "description": "Convert between different data types",
+    "icon": "🔄",
+    "color": "#03A9F4",
+    "order": 2
+  },
+  {
+    "id": "math",
+    "title": "Math Operations",
+    "description": "Practice mathematical operations and functions",
+    "icon": "🔢",
+    "color": "#FF5722",
+    "order": 3
+  },
+  {
+    "id": "conditionals",
+    "title": "Conditionals",
+    "description": "Practice if/else statements and boolean logic",
+    "icon": "🔀",
+    "color": "#673AB7",
+    "order": 4
+  },
+  {
+    "id": "loops",
+    "title": "Loops",
+    "description": "Master all types of loops: for, while, foreach",
+    "icon": "🔁",
+    "color": "#9C27B0",
+    "order": 5
+  },
+  {
+    "id": "arrays",
+    "title": "Arrays",
+    "description": "Master array operations and methods",
+    "icon": "📝",
+    "color": "#4CAF50",
+    "order": 6
+  },
+  {
+    "id": "lists",
+    "title": "Lists",
+    "description": "Work with List<T> and generic collections",
+    "icon": "📋",
+    "color": "#00BCD4",
+    "order": 7
+  },
+  {
+    "id": "dictionaries",
+    "title": "Dictionaries",
+    "description": "Learn Dictionary<TKey, TValue> operations",
+    "icon": "📚",
+    "color": "#FF9800",
+    "order": 8
+  },
+  {
+    "id": "linq",
+    "title": "LINQ",
+    "description": "Master Language Integrated Query expressions",
+    "icon": "⚡",
+    "color": "#FFC107",
+    "order": 9
+  },
+  {
+    "id": "methods",
+    "title": "Methods",
+    "description": "Learn method definitions, parameters, and return values",
+    "icon": "⚙️",
+    "color": "#795548",
+    "order": 10
+  },
+  {
+    "id": "classes",
+    "title": "Classes",
+    "description": "Learn object-oriented programming with classes",
+    "icon": "🏗️",
+    "color": "#E91E63",
+    "order": 11
+  },
+  {
+    "id": "exceptions",
+    "title": "Exceptions",
+    "description": "Handle errors with try/catch and custom exceptions",
+    "icon": "⚠️",
+    "color": "#F44336",
+    "order": 12
+  }
+]

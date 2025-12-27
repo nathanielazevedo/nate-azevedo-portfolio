@@ -27,6 +27,7 @@ import Quiz from "./pages/courses/multipleChoice/QuizMain.tsx";
 import DrillsList from "./pages/drills/DrillsList";
 import PythonDrills from "./pages/drills/python/PythonDrills";
 import PandasDrills from "./pages/drills/pandas/PandasDrills";
+import CSharpDrills from "./pages/drills/csharp/CSharpDrills";
 
 import { AuthProvider } from "./contexts/AuthContext.tsx";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -114,6 +115,10 @@ const router = createBrowserRouter([
           {
             path: "pandas",
             element: <PandasDrills />,
+          },
+          {
+            path: "csharp",
+            element: <CSharpDrills />,
           },
         ],
       },

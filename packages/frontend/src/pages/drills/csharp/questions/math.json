@@ -1,0 +1,135 @@
+[
+  {
+    "id": "cs-math-add-1",
+    "title": "Addition",
+    "difficulty": "easy",
+    "description": "Add two numbers together.",
+    "setupCode": "int a = 10;\nint b = 5;",
+    "starterCode": "// Write your code here\nint sum = ",
+    "expectedOutput": "15",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        int a = 10;\n        int b = 5;\n        {user_code}\n        Console.WriteLine(sum);\n    }\n}",
+    "hints": [
+      "Use the + operator"
+    ]
+  },
+  {
+    "id": "cs-math-subtract-1",
+    "title": "Subtraction",
+    "difficulty": "easy",
+    "description": "Subtract b from a.",
+    "setupCode": "int a = 10;\nint b = 3;",
+    "starterCode": "// Write your code here\nint difference = ",
+    "expectedOutput": "7",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        int a = 10;\n        int b = 3;\n        {user_code}\n        Console.WriteLine(difference);\n    }\n}",
+    "hints": [
+      "Use the - operator"
+    ]
+  },
+  {
+    "id": "cs-math-multiply-1",
+    "title": "Multiplication",
+    "difficulty": "easy",
+    "description": "Multiply two numbers.",
+    "setupCode": "int a = 6;\nint b = 7;",
+    "starterCode": "// Write your code here\nint product = ",
+    "expectedOutput": "42",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        int a = 6;\n        int b = 7;\n        {user_code}\n        Console.WriteLine(product);\n    }\n}",
+    "hints": [
+      "Use the * operator"
+    ]
+  },
+  {
+    "id": "cs-math-divide-1",
+    "title": "Division",
+    "difficulty": "easy",
+    "description": "Divide a by b (integer division).",
+    "setupCode": "int a = 20;\nint b = 4;",
+    "starterCode": "// Write your code here\nint quotient = ",
+    "expectedOutput": "5",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        int a = 20;\n        int b = 4;\n        {user_code}\n        Console.WriteLine(quotient);\n    }\n}",
+    "hints": [
+      "Use the / operator",
+      "Integer division truncates decimals"
+    ]
+  },
+  {
+    "id": "cs-math-modulo-1",
+    "title": "Modulo (Remainder)",
+    "difficulty": "easy",
+    "description": "Get the remainder when dividing a by b.",
+    "setupCode": "int a = 17;\nint b = 5;",
+    "starterCode": "// Write your code here\nint remainder = ",
+    "expectedOutput": "2",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        int a = 17;\n        int b = 5;\n        {user_code}\n        Console.WriteLine(remainder);\n    }\n}",
+    "hints": [
+      "Use the % operator"
+    ]
+  },
+  {
+    "id": "cs-math-power-1",
+    "title": "Power",
+    "difficulty": "easy",
+    "description": "Calculate 2 raised to the power of 3.",
+    "setupCode": "",
+    "starterCode": "// Write your code here\nint result = ",
+    "expectedOutput": "8",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        {user_code}\n        Console.WriteLine(result);\n    }\n}",
+    "hints": [
+      "Use Math.Pow(base, exponent)",
+      "Convert the result to int: (int)Math.Pow(2, 3)"
+    ]
+  },
+  {
+    "id": "cs-math-abs-1",
+    "title": "Absolute Value",
+    "difficulty": "easy",
+    "description": "Get the absolute value of a negative number.",
+    "setupCode": "int number = -42;",
+    "starterCode": "// Write your code here\nint absolute = ",
+    "expectedOutput": "42",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        int number = -42;\n        {user_code}\n        Console.WriteLine(absolute);\n    }\n}",
+    "hints": [
+      "Use Math.Abs() method"
+    ]
+  },
+  {
+    "id": "cs-math-max-1",
+    "title": "Maximum Value",
+    "difficulty": "easy",
+    "description": "Find the maximum of two numbers.",
+    "setupCode": "int a = 15;\nint b = 23;",
+    "starterCode": "// Write your code here\nint max = ",
+    "expectedOutput": "23",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        int a = 15;\n        int b = 23;\n        {user_code}\n        Console.WriteLine(max);\n    }\n}",
+    "hints": [
+      "Use Math.Max() method"
+    ]
+  },
+  {
+    "id": "cs-math-min-1",
+    "title": "Minimum Value",
+    "difficulty": "easy",
+    "description": "Find the minimum of two numbers.",
+    "setupCode": "int a = 15;\nint b = 23;",
+    "starterCode": "// Write your code here\nint min = ",
+    "expectedOutput": "15",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        int a = 15;\n        int b = 23;\n        {user_code}\n        Console.WriteLine(min);\n    }\n}",
+    "hints": [
+      "Use Math.Min() method"
+    ]
+  },
+  {
+    "id": "cs-math-sqrt-1",
+    "title": "Square Root",
+    "difficulty": "easy",
+    "description": "Calculate the square root of 16.",
+    "setupCode": "",
+    "starterCode": "// Write your code here\nint result = ",
+    "expectedOutput": "4",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        {user_code}\n        Console.WriteLine(result);\n    }\n}",
+    "hints": [
+      "Use Math.Sqrt() method",
+      "Convert to int: (int)Math.Sqrt(16)"
+    ]
+  }
+]

@@ -1,0 +1,143 @@
+[
+  {
+    "id": "cs-string-index-1",
+    "title": "String Indexing",
+    "difficulty": "easy",
+    "description": "Get the character at index 5 in the string.",
+    "setupCode": "string text = \"Hello World\";",
+    "starterCode": "// Write your code here\nchar character = ",
+    "expectedOutput": " ",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        string text = \"Hello World\";\n        {user_code}\n        Console.WriteLine(character);\n    }\n}",
+    "hints": [
+      "Strings can be indexed using square brackets []",
+      "Don't forget spaces count as characters",
+      "Indices start at 0"
+    ]
+  },
+  {
+    "id": "cs-string-length-1",
+    "title": "String Length",
+    "difficulty": "easy",
+    "description": "Get the length of the string.",
+    "setupCode": "string word = \"Programming\";",
+    "starterCode": "// Write your code here\nint length = ",
+    "expectedOutput": "11",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        string word = \"Programming\";\n        {user_code}\n        Console.WriteLine(length);\n    }\n}",
+    "hints": [
+      "Use the .Length property",
+      "Length is a property, not a method"
+    ]
+  },
+  {
+    "id": "cs-string-upper-1",
+    "title": "Convert to Uppercase",
+    "difficulty": "easy",
+    "description": "Convert the string to uppercase.",
+    "setupCode": "string text = \"hello world\";",
+    "starterCode": "// Write your code here\nstring upper = ",
+    "expectedOutput": "HELLO WORLD",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        string text = \"hello world\";\n        {user_code}\n        Console.WriteLine(upper);\n    }\n}",
+    "hints": [
+      "Use the .ToUpper() method",
+      "String methods in C# are PascalCase"
+    ]
+  },
+  {
+    "id": "cs-string-lower-1",
+    "title": "Convert to Lowercase",
+    "difficulty": "easy",
+    "description": "Convert the string to lowercase.",
+    "setupCode": "string text = \"HELLO WORLD\";",
+    "starterCode": "// Write your code here\nstring lower = ",
+    "expectedOutput": "hello world",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        string text = \"HELLO WORLD\";\n        {user_code}\n        Console.WriteLine(lower);\n    }\n}",
+    "hints": [
+      "Use the .ToLower() method"
+    ]
+  },
+  {
+    "id": "cs-string-substring-1",
+    "title": "Extract Substring",
+    "difficulty": "easy",
+    "description": "Extract characters from index 6 to the end.",
+    "setupCode": "string text = \"Hello World\";",
+    "starterCode": "// Write your code here\nstring result = ",
+    "expectedOutput": "World",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        string text = \"Hello World\";\n        {user_code}\n        Console.WriteLine(result);\n    }\n}",
+    "hints": [
+      "Use the .Substring() method",
+      "Substring(6) extracts from index 6 to the end"
+    ]
+  },
+  {
+    "id": "cs-string-contains-1",
+    "title": "Check if String Contains",
+    "difficulty": "easy",
+    "description": "Check if the string contains the word 'World'.",
+    "setupCode": "string text = \"Hello World\";",
+    "starterCode": "// Write your code here\nbool contains = ",
+    "expectedOutput": "True",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        string text = \"Hello World\";\n        {user_code}\n        Console.WriteLine(contains);\n    }\n}",
+    "hints": [
+      "Use the .Contains() method",
+      "Contains() returns a boolean"
+    ]
+  },
+  {
+    "id": "cs-string-replace-1",
+    "title": "Replace Characters",
+    "difficulty": "easy",
+    "description": "Replace 'World' with 'C#'.",
+    "setupCode": "string text = \"Hello World\";",
+    "starterCode": "// Write your code here\nstring result = ",
+    "expectedOutput": "Hello C#",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        string text = \"Hello World\";\n        {user_code}\n        Console.WriteLine(result);\n    }\n}",
+    "hints": [
+      "Use the .Replace() method",
+      "Replace(oldValue, newValue)"
+    ]
+  },
+  {
+    "id": "cs-string-trim-1",
+    "title": "Trim Whitespace",
+    "difficulty": "easy",
+    "description": "Remove leading and trailing whitespace.",
+    "setupCode": "string text = \"  Hello World  \";",
+    "starterCode": "// Write your code here\nstring trimmed = ",
+    "expectedOutput": "Hello World",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        string text = \"  Hello World  \";\n        {user_code}\n        Console.WriteLine(trimmed);\n    }\n}",
+    "hints": [
+      "Use the .Trim() method",
+      "Trim() removes whitespace from both ends"
+    ]
+  },
+  {
+    "id": "cs-string-split-1",
+    "title": "Split String",
+    "difficulty": "medium",
+    "description": "Split the string by spaces and get the second word.",
+    "setupCode": "string text = \"Hello World Programming\";",
+    "starterCode": "// Write your code here\nstring secondWord = ",
+    "expectedOutput": "World",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        string text = \"Hello World Programming\";\n        {user_code}\n        Console.WriteLine(secondWord);\n    }\n}",
+    "hints": [
+      "Use the .Split() method",
+      "Split returns an array",
+      "Array indices start at 0"
+    ]
+  },
+  {
+    "id": "cs-string-startswith-1",
+    "title": "Check String Start",
+    "difficulty": "easy",
+    "description": "Check if the string starts with 'Hello'.",
+    "setupCode": "string text = \"Hello World\";",
+    "starterCode": "// Write your code here\nbool startsWithHello = ",
+    "expectedOutput": "True",
+    "testCode": "using System;\nclass Program {\n    static void Main() {\n        string text = \"Hello World\";\n        {user_code}\n        Console.WriteLine(startsWithHello);\n    }\n}",
+    "hints": [
+      "Use the .StartsWith() method",
+      "StartsWith() returns a boolean"
+    ]
+  }
+]

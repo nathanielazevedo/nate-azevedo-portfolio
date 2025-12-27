@@ -14,6 +14,13 @@
     "icon": "🐼"
   },
   {
+    "id": "csharp",
+    "title": "C#",
+    "description": "Master C# fundamentals, .NET features, and modern patterns.",
+    "color": "#239120",
+    "icon": "#️⃣"
+  },
+  {
     "id": "javascript",
     "title": "JavaScript",
     "description": "Deep dive into JavaScript concepts, ES6+, and best practices.",
