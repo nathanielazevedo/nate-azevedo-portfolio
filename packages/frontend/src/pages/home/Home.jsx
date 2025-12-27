@@ -69,7 +69,13 @@ const PromoPage = () => {
   ];
 
   return (
-    <Box sx={{ bgcolor: "background.default", minHeight: "100vh", color: "text.primary" }}>
+    <Box
+      sx={{
+        bgcolor: "background.default",
+        minHeight: "100vh",
+        color: "text.primary",
+      }}
+    >
       {/* Hero Section */}
       <Container maxWidth="lg">
         <Box sx={{ py: 12, textAlign: "center" }}>
@@ -304,10 +310,7 @@ const PromoPage = () => {
                   <Typography variant="h6" sx={{ fontWeight: 600 }}>
                     Learning-Focused
                   </Typography>
-                  <Typography
-                    variant="body2"
-                    sx={{ color: "text.secondary" }}
-                  >
+                  <Typography variant="body2" sx={{ color: "text.secondary" }}>
                     Designed to capture your brain's interest through engaging
                     challenges
                   </Typography>
@@ -322,14 +325,13 @@ const PromoPage = () => {
                     gap: 1,
                   }}
                 >
-                  <TrendingUp sx={{ fontSize: 48, color: "primary.main", mb: 1 }} />
+                  <TrendingUp
+                    sx={{ fontSize: 48, color: "primary.main", mb: 1 }}
+                  />
                   <Typography variant="h6" sx={{ fontWeight: 600 }}>
                     Progressive
                   </Typography>
-                  <Typography
-                    variant="body2"
-                    sx={{ color: "text.secondary" }}
-                  >
+                  <Typography variant="body2" sx={{ color: "text.secondary" }}>
                     Build skills gradually with structured workouts and games
                   </Typography>
                 </Box>
@@ -343,14 +345,13 @@ const PromoPage = () => {
                     gap: 1,
                   }}
                 >
-                  <PlayArrow sx={{ fontSize: 48, color: "primary.main", mb: 1 }} />
+                  <PlayArrow
+                    sx={{ fontSize: 48, color: "primary.main", mb: 1 }}
+                  />
                   <Typography variant="h6" sx={{ fontWeight: 600 }}>
                     Always Free
                   </Typography>
-                  <Typography
-                    variant="body2"
-                    sx={{ color: "text.secondary" }}
-                  >
+                  <Typography variant="body2" sx={{ color: "text.secondary" }}>
                     No paywalls, no subscriptions. Just pure learning
                   </Typography>
                 </Box>
