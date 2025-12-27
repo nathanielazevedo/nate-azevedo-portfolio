@@ -134,14 +134,14 @@ const pages = [
     title: "Quizes",
     to: "/quizes",
   },
-  {
-    title: "Battle",
-    to: "/battle",
-  },
-  {
-    title: "Battle Practice",
-    to: "/battle-practice",
-  },
+  // {
+  //   title: "Battle",
+  //   to: "/battle",
+  // },
+  // {
+  //   title: "Battle Practice",
+  //   to: "/battle-practice",
+  // },
 ];
 
 const Navbar = () => {
@@ -275,53 +275,38 @@ const Navbar = () => {
             width: "100%",
           }}
         >
-          <Typography
-            variant="h6"
-            component={Link}
-            to="/"
-            onClick={() => window.scrollTo(0, 0)}
-            sx={(theme) => ({
-              fontWeight: "bold",
-              textDecoration: "none",
-              color:
-                location.pathname === "/"
-                  ? theme.palette.primary.main
-                  : theme.palette.text.primary,
-              transition: "color 0.2s ease",
-              position: "relative",
-              "&:hover": {
-                color: theme.palette.primary.main,
-              },
-              "&::after":
-                location.pathname === "/"
-                  ? {
-                      content: '""',
-                      position: "absolute",
-                      bottom: -4,
-                      left: 0,
-                      right: 0,
-                      height: 2,
-                      backgroundColor: theme.palette.primary.main,
-                      borderRadius: 1,
-                    }
-                  : {},
-            })}
-          >
-            Web Dev Interviews
-          </Typography>
-
-          {/* Study Material Section */}
           <Box
             sx={{
-              display: { xs: "none", md: "flex" },
-              gap: 3,
+              display: "flex",
               alignItems: "center",
+              gap: 4,
             }}
           >
+            <Typography
+              variant="h6"
+              component={Link}
+              to="/"
+              onClick={() => window.scrollTo(0, 0)}
+              sx={(theme) => ({
+                fontWeight: "bold",
+                textDecoration: "none",
+                color:
+                  location.pathname === "/"
+                    ? theme.palette.primary.main
+                    : theme.palette.text.primary,
+                transition: "color 0.2s ease",
+                "&:hover": {
+                  color: theme.palette.primary.main,
+                },
+              })}
+            >
+              Web Dev Interviews
+            </Typography>
+
             {/* Navigation Links */}
             <Box
               sx={{
-                display: "flex",
+                display: { xs: "none", md: "flex" },
                 gap: 1,
                 alignItems: "center",
               }}
@@ -370,144 +355,147 @@ const Navbar = () => {
           </Box>
 
           {/* Auth Section */}
-          {!user && (
-            <Button
-              component={Link}
-              to="/auth"
-              variant="outlined"
-              sx={{
-                mr: 2,
-                textTransform: "none",
-                fontWeight: 500,
-                borderRadius: 2,
-              }}
-            >
-              Sign In
-            </Button>
-          )}
-
-          {/* User Menu - only show if user is authenticated */}
-          {user && (
-            <Box sx={{ mr: 2 }}>
-              <IconButton
-                onClick={handleUserMenuOpen}
+          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+            {!user && (
+              <Button
+                component={Link}
+                to="/auth"
+                variant="outlined"
                 sx={{
-                  p: 0,
-                  border: "2px solid transparent",
-                  "&:hover": {
-                    border: "2px solid",
-                    borderColor: "primary.main",
-                  },
+                  textTransform: "none",
+                  fontWeight: 500,
+                  borderRadius: 2,
                 }}
               >
-                {(() => {
-                  const avatarId = user?.user_metadata?.avatar || "default";
-                  const avatar = AVATAR_OPTIONS.find((a) => a.id === avatarId);
+                Sign In
+              </Button>
+            )}
 
-                  if (avatar && avatar.type === "emoji") {
+            {/* User Menu - only show if user is authenticated */}
+            {user && (
+              <Box>
+                <IconButton
+                  onClick={handleUserMenuOpen}
+                  sx={{
+                    p: 0,
+                    border: "2px solid transparent",
+                    "&:hover": {
+                      border: "2px solid",
+                      borderColor: "primary.main",
+                    },
+                  }}
+                >
+                  {(() => {
+                    const avatarId = user?.user_metadata?.avatar || "default";
+                    const avatar = AVATAR_OPTIONS.find(
+                      (a) => a.id === avatarId
+                    );
+
+                    if (avatar && avatar.type === "emoji") {
+                      return (
+                        <Box
+                          sx={{
+                            width: 48,
+                            height: 48,
+                            borderRadius: "50%",
+                            bgcolor: "grey.100",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            fontSize: "1.4rem",
+                            border: "2px solid transparent",
+                            "&:hover": {
+                              border: "2px solid",
+                              borderColor: "primary.main",
+                            },
+                          }}
+                        >
+                          {avatar.emoji}
+                        </Box>
+                      );
+                    }
+
                     return (
-                      <Box
+                      <Avatar
                         sx={{
                           width: 48,
                           height: 48,
-                          borderRadius: "50%",
-                          bgcolor: "grey.100",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          fontSize: "1.4rem",
-                          border: "2px solid transparent",
-                          "&:hover": {
-                            border: "2px solid",
-                            borderColor: "primary.main",
-                          },
+                          bgcolor: "primary.main",
+                          fontSize: "1.2rem",
                         }}
                       >
-                        {avatar.emoji}
-                      </Box>
+                        {renderAvatarContent(avatarId, user)}
+                      </Avatar>
                     );
-                  }
+                  })()}
+                </IconButton>
 
-                  return (
-                    <Avatar
-                      sx={{
-                        width: 48,
-                        height: 48,
-                        bgcolor: "primary.main",
-                        fontSize: "1.2rem",
-                      }}
-                    >
-                      {renderAvatarContent(avatarId, user)}
-                    </Avatar>
-                  );
-                })()}
-              </IconButton>
-
-              <Menu
-                anchorEl={anchorEl}
-                open={Boolean(anchorEl)}
-                onClose={handleUserMenuClose}
-                onClick={handleUserMenuClose}
-                PaperProps={{
-                  elevation: 3,
-                  sx: {
-                    overflow: "visible",
-                    filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
-                    mt: 1.5,
-                    minWidth: 200,
-                    "& .MuiAvatar-root": {
-                      width: 24,
-                      height: 24,
-                      ml: -0.5,
-                      mr: 1,
+                <Menu
+                  anchorEl={anchorEl}
+                  open={Boolean(anchorEl)}
+                  onClose={handleUserMenuClose}
+                  onClick={handleUserMenuClose}
+                  PaperProps={{
+                    elevation: 3,
+                    sx: {
+                      overflow: "visible",
+                      filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+                      mt: 1.5,
+                      minWidth: 200,
+                      "& .MuiAvatar-root": {
+                        width: 24,
+                        height: 24,
+                        ml: -0.5,
+                        mr: 1,
+                      },
                     },
-                  },
-                }}
-                transformOrigin={{ horizontal: "right", vertical: "top" }}
-                anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
-              >
-                <Box sx={{ px: 2, py: 1 }}>
-                  <Typography variant="subtitle2" color="text.secondary">
-                    Signed in as
-                  </Typography>
-                  <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                    <Typography variant="body2" fontWeight="medium">
-                      {user.user_metadata?.display_name || user.email}
+                  }}
+                  transformOrigin={{ horizontal: "right", vertical: "top" }}
+                  anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
+                >
+                  <Box sx={{ px: 2, py: 1 }}>
+                    <Typography variant="subtitle2" color="text.secondary">
+                      Signed in as
                     </Typography>
-                    {user.user_metadata?.country && (
-                      <Chip
-                        size="small"
-                        label={
-                          COUNTRIES.find(
-                            (c) => c.code === user.user_metadata.country
-                          )?.flag || "🌍"
-                        }
-                        sx={{
-                          fontSize: "0.8rem",
-                          height: 20,
-                          "& .MuiChip-label": { px: 0.5 },
-                        }}
-                      />
-                    )}
+                    <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                      <Typography variant="body2" fontWeight="medium">
+                        {user.user_metadata?.display_name || user.email}
+                      </Typography>
+                      {user.user_metadata?.country && (
+                        <Chip
+                          size="small"
+                          label={
+                            COUNTRIES.find(
+                              (c) => c.code === user.user_metadata.country
+                            )?.flag || "🌍"
+                          }
+                          sx={{
+                            fontSize: "0.8rem",
+                            height: 20,
+                            "& .MuiChip-label": { px: 0.5 },
+                          }}
+                        />
+                      )}
+                    </Box>
                   </Box>
-                </Box>
 
-                <Divider />
+                  <Divider />
 
-                <MenuItem onClick={handleProfileOpen}>
-                  <Person fontSize="small" sx={{ mr: 1 }} />
-                  Profile
-                </MenuItem>
+                  <MenuItem onClick={handleProfileOpen}>
+                    <Person fontSize="small" sx={{ mr: 1 }} />
+                    Profile
+                  </MenuItem>
 
-                <Divider />
+                  <Divider />
 
-                <MenuItem onClick={handleLogout} sx={{ color: "error.main" }}>
-                  <Logout fontSize="small" sx={{ mr: 1 }} />
-                  Sign Out
-                </MenuItem>
-              </Menu>
-            </Box>
-          )}
+                  <MenuItem onClick={handleLogout} sx={{ color: "error.main" }}>
+                    <Logout fontSize="small" sx={{ mr: 1 }} />
+                    Sign Out
+                  </MenuItem>
+                </Menu>
+              </Box>
+            )}
+          </Box>
         </Box>
       </Toolbar>
 
