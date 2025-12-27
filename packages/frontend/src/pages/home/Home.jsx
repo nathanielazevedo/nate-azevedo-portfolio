@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Container,
   Typography,
@@ -8,6 +9,7 @@ import {
   Card,
   CardContent,
   Chip,
+  useTheme,
 } from "@mui/material";
 import {
   PlayArrow,
@@ -19,13 +21,15 @@ import {
 } from "@mui/icons-material";
 
 const PromoPage = () => {
+  const navigate = useNavigate();
+  const theme = useTheme();
   const features = [
     {
       icon: <Code />,
-      title: "Interactive Games",
+      title: "Coding Drills",
       description:
-        "Master JavaScript fundamentals through engaging challenges that test your understanding of comparison operators, type coercion, and error handling.",
-      count: "50+ Games",
+        "Practice Python, C#, Pandas, and more with interactive coding challenges. Write real code and get instant feedback on your solutions.",
+      count: "100+ Drills",
     },
     {
       icon: <FitnessCenter />,
@@ -36,10 +40,10 @@ const PromoPage = () => {
     },
     {
       icon: <VideoLibrary />,
-      title: "Video Tutorials",
+      title: "Interactive Games",
       description:
-        "Deep dive into complex topics with clear, concise explanations that break down advanced concepts into digestible lessons.",
-      count: "50+ Videos",
+        "Master JavaScript fundamentals through engaging challenges that test your understanding of comparison operators, type coercion, and error handling.",
+      count: "50+ Games",
     },
   ];
 
@@ -65,7 +69,7 @@ const PromoPage = () => {
   ];
 
   return (
-    <Box sx={{ bgcolor: "#1E1E1E", minHeight: "100vh", color: "white" }}>
+    <Box sx={{ bgcolor: "background.default", minHeight: "100vh", color: "text.primary" }}>
       {/* Hero Section */}
       <Container maxWidth="lg">
         <Box sx={{ py: 12, textAlign: "center" }}>
@@ -82,7 +86,7 @@ const PromoPage = () => {
           <Typography
             variant="h5"
             sx={{
-              color: "rgba(255, 255, 255, 0.7)",
+              color: "text.secondary",
               mb: 1,
               fontWeight: 400,
               maxWidth: "800px",
@@ -94,7 +98,7 @@ const PromoPage = () => {
           <Typography
             variant="body1"
             sx={{
-              color: "rgba(255, 255, 255, 0.5)",
+              color: "text.secondary",
               mb: 5,
               fontSize: "1.1rem",
             }}
@@ -113,6 +117,7 @@ const PromoPage = () => {
               variant="contained"
               size="large"
               startIcon={<PlayArrow />}
+              onClick={() => navigate("/games")}
               sx={{
                 bgcolor: "#10A37F",
                 color: "white",
@@ -131,17 +136,18 @@ const PromoPage = () => {
             <Button
               variant="outlined"
               size="large"
+              onClick={() => navigate("/workouts")}
               sx={{
-                borderColor: "rgba(255, 255, 255, 0.2)",
-                color: "white",
+                borderColor: "divider",
+                color: "text.primary",
                 px: 4,
                 py: 1.5,
                 textTransform: "none",
                 fontSize: "1rem",
                 fontWeight: 500,
                 "&:hover": {
-                  borderColor: "rgba(255, 255, 255, 0.4)",
-                  bgcolor: "rgba(255, 255, 255, 0.05)",
+                  borderColor: "primary.main",
+                  bgcolor: "action.hover",
                 },
               }}
             >
@@ -157,19 +163,19 @@ const PromoPage = () => {
               <Grid item xs={12} md={4} key={index}>
                 <Card
                   sx={{
-                    bgcolor: "#2D2D2D",
+                    bgcolor: "background.paper",
                     height: "100%",
                     transition: "all 0.2s ease",
                     "&:hover": {
                       transform: "translateY(-4px)",
-                      bgcolor: "#343434",
+                      boxShadow: 4,
                     },
                   }}
                 >
                   <CardContent sx={{ p: 3 }}>
                     <Box
                       sx={{
-                        color: "#10A37F",
+                        color: "primary.main",
                         mb: 2,
                         display: "flex",
                         alignItems: "center",
@@ -181,8 +187,8 @@ const PromoPage = () => {
                         label={feature.count}
                         size="small"
                         sx={{
-                          bgcolor: "rgba(16, 163, 127, 0.1)",
-                          color: "#10A37F",
+                          bgcolor: "action.selected",
+                          color: "primary.main",
                           fontWeight: 500,
                         }}
                       />
@@ -192,7 +198,7 @@ const PromoPage = () => {
                     </Typography>
                     <Typography
                       variant="body2"
-                      sx={{ color: "rgba(255, 255, 255, 0.6)" }}
+                      sx={{ color: "text.secondary" }}
                     >
                       {feature.description}
                     </Typography>
@@ -219,7 +225,7 @@ const PromoPage = () => {
             variant="body1"
             sx={{
               mb: 5,
-              color: "rgba(255, 255, 255, 0.6)",
+              color: "text.secondary",
               textAlign: "center",
             }}
           >
@@ -230,13 +236,13 @@ const PromoPage = () => {
               <Grid item xs={12} md={4} key={index}>
                 <Card
                   sx={{
-                    bgcolor: "#2D2D2D",
+                    bgcolor: "background.paper",
                     height: "100%",
                     cursor: "pointer",
                     transition: "all 0.2s ease",
                     "&:hover": {
                       transform: "translateY(-4px)",
-                      bgcolor: "#343434",
+                      boxShadow: 4,
                     },
                   }}
                 >
@@ -260,14 +266,14 @@ const PromoPage = () => {
                         size="small"
                         variant="outlined"
                         sx={{
-                          borderColor: "rgba(255, 255, 255, 0.2)",
-                          color: "rgba(255, 255, 255, 0.7)",
+                          borderColor: "divider",
+                          color: "text.secondary",
                         }}
                       />
                     </Box>
                     <Typography
                       variant="body2"
-                      sx={{ color: "rgba(255, 255, 255, 0.6)" }}
+                      sx={{ color: "text.secondary" }}
                     >
                       {game.description}
                     </Typography>
@@ -280,7 +286,7 @@ const PromoPage = () => {
 
         {/* Stats Section */}
         <Box sx={{ py: 8, textAlign: "center" }}>
-          <Card sx={{ bgcolor: "#2D2D2D", p: 5 }}>
+          <Card sx={{ bgcolor: "background.paper", p: 5 }}>
             <Typography variant="h4" sx={{ mb: 3, fontWeight: 600 }}>
               Why Web Dev Interviews?
             </Typography>
@@ -294,13 +300,13 @@ const PromoPage = () => {
                     gap: 1,
                   }}
                 >
-                  <School sx={{ fontSize: 48, color: "#10A37F", mb: 1 }} />
+                  <School sx={{ fontSize: 48, color: "primary.main", mb: 1 }} />
                   <Typography variant="h6" sx={{ fontWeight: 600 }}>
                     Learning-Focused
                   </Typography>
                   <Typography
                     variant="body2"
-                    sx={{ color: "rgba(255, 255, 255, 0.6)" }}
+                    sx={{ color: "text.secondary" }}
                   >
                     Designed to capture your brain's interest through engaging
                     challenges
@@ -316,13 +322,13 @@ const PromoPage = () => {
                     gap: 1,
                   }}
                 >
-                  <TrendingUp sx={{ fontSize: 48, color: "#10A37F", mb: 1 }} />
+                  <TrendingUp sx={{ fontSize: 48, color: "primary.main", mb: 1 }} />
                   <Typography variant="h6" sx={{ fontWeight: 600 }}>
                     Progressive
                   </Typography>
                   <Typography
                     variant="body2"
-                    sx={{ color: "rgba(255, 255, 255, 0.6)" }}
+                    sx={{ color: "text.secondary" }}
                   >
                     Build skills gradually with structured workouts and games
                   </Typography>
@@ -337,13 +343,13 @@ const PromoPage = () => {
                     gap: 1,
                   }}
                 >
-                  <PlayArrow sx={{ fontSize: 48, color: "#10A37F", mb: 1 }} />
+                  <PlayArrow sx={{ fontSize: 48, color: "primary.main", mb: 1 }} />
                   <Typography variant="h6" sx={{ fontWeight: 600 }}>
                     Always Free
                   </Typography>
                   <Typography
                     variant="body2"
-                    sx={{ color: "rgba(255, 255, 255, 0.6)" }}
+                    sx={{ color: "text.secondary" }}
                   >
                     No paywalls, no subscriptions. Just pure learning
                   </Typography>
@@ -362,7 +368,7 @@ const PromoPage = () => {
             variant="body1"
             sx={{
               mb: 4,
-              color: "rgba(255, 255, 255, 0.6)",
+              color: "text.secondary",
               maxWidth: "600px",
               mx: "auto",
             }}
@@ -374,6 +380,7 @@ const PromoPage = () => {
             variant="contained"
             size="large"
             startIcon={<PlayArrow />}
+            onClick={() => navigate("/games")}
             sx={{
               bgcolor: "#10A37F",
               color: "white",

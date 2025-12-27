@@ -32,7 +32,7 @@ import CSharpDrills from "./pages/drills/csharp/CSharpDrills";
 import { AuthProvider } from "./contexts/AuthContext.tsx";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
-import App from "./pages/portfolio/App.jsx";
+import Home from "./pages/home/Home.jsx";
 
 const router = createBrowserRouter([
   {
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <App />,
+        element: <Home />,
         errorElement: <Error />,
       },
       {

@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { Divider } from "@mui/material";
 import { Analytics } from "@vercel/analytics/react";
-import { Navbar } from "../pages/portfolio/components";
+import Navbar from "../components/Navbar";
 import FloatingThemeToggle from "../components/FloatingThemeToggle";
 
 const Root = () => (

@@ -1,10 +1,19 @@
-# Nathaniel Azevedo - Portfolio Website
+# Web Dev Interviews
 
-Welcome to my portfolio website! This is a modern full-stack application showcasing my software engineering skills through a real-time coding battle platform.
+Welcome to Web Dev Interviews! An interactive learning platform for mastering web development through coding challenges, drills, and real-time battles.
 
 ## Overview
 
-This portfolio demonstrates advanced web development capabilities through an interactive coding platform. It features real-time multiplayer battles, user authentication, geolocation services, and comprehensive database management - all built with modern technologies and best practices.
+Web Dev Interviews is a comprehensive coding education platform that helps developers sharpen their skills through interactive games, coding drills, structured workouts, and real-time multiplayer battles. The platform features user authentication, geolocation services, and comprehensive database management - all built with modern technologies and best practices.
+
+## Features
+
+- **Coding Drills:** Practice Python, C#, Pandas, and more with 100+ interactive coding challenges
+- **Coding Workouts:** Structured exercises for building problem-solving muscle memory
+- **Interactive Games:** Master JavaScript fundamentals through engaging challenges
+- **Battle Mode:** Compete against other developers in real-time coding battles
+- **Quizzes:** Test your knowledge with multiple-choice questions
+- **Battle Practice:** Hone your skills before entering competitive battles
 
 ## System Design
 

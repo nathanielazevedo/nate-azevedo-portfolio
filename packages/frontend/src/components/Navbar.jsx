@@ -307,7 +307,7 @@ const Navbar = () => {
                   : {},
             })}
           >
-            Nate Azevedo
+            Web Dev Interviews
           </Typography>
 
           {/* Study Material Section */}
